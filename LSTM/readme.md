@@ -1,6 +1,6 @@
-# Modelo LSTM para [Predecir el precio del Oro]
+# Modelo LSTM para ['Predecir el precio del Oro']
 
-Esta carpeta contiene los archivos necesarios para entender, utilizar y potencialmente replicar el entrenamiento de un modelo de Red Neuronal Recurrente Long Short-Term Memory (LSTM) diseñado para [predecir el precio del oro en el mercado actual].
+Esta carpeta contiene los archivos necesarios para entender, utilizar y potencialmente replicar el entrenamiento de un modelo de Red Neuronal Recurrente Long Short-Term Memory (LSTM) diseñado para ['predecir el precio del oro en el mercado actual'].
 
 ## Contenido
 
