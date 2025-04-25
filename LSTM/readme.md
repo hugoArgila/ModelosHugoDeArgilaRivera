@@ -1,6 +1,6 @@
-# Modelo LSTM para ['Predecir el precio del Oro']
+# Modelo LSTM para predecir el precio del Oro'
 
-Esta carpeta contiene los archivos necesarios para entender, utilizar y potencialmente replicar el entrenamiento de un modelo de Red Neuronal Recurrente Long Short-Term Memory (LSTM) diseñado para ['predecir el precio del oro en el mercado actual'].
+Esta carpeta contiene los archivos necesarios para entender, utilizar y potencialmente replicar el entrenamiento de un modelo de Red Neuronal Recurrente Long Short-Term Memory (LSTM) diseñado para predecir el precio del oro en el mercado actual.
 
 ## Contenido
 
@@ -33,7 +33,7 @@ Esta carpeta contiene los archivos necesarios para entender, utilizar y potencia
 
 Para ejecutar el notebook y utilizar el modelo, necesitarás tener instaladas las siguientes bibliotecas de Python:
 
-* **Python** (versión recomendada: 3.x)
+* **Python** (versión recomendada: 3.14)
 * **TensorFlow** (con Keras)
 * **NumPy**
 * **Pandas**
