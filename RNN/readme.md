@@ -1,4 +1,4 @@
-# Modelo RNN para predecir numeros escritos a mano en códigos postales con API Flask
+# Modelo CNN para predecir numeros escritos a mano en códigos postales con API Flask
 
 Esta carpeta contiene los archivos necesarios para entender, utilizar y probar un modelo de Red Neuronal Recurrente (RNN) diseñado para predecir numeros escritos digitalmente, principalmente para códigos postales. Además, incluye una API construida con Flask para interactuar con el modelo a través de una interfaz web sencilla.
 
