@@ -6,7 +6,7 @@ Este repositorio contiene una colección de modelos de deep learning que he desa
 
 Actualmente, este portafolio incluye los siguientes modelos:
 
-* **RNN (Red Neuronal Convolucional):**  Una implementación básica de una Red Neuronal Convolucional, diseñada principalmente para el procesamiento de datos con una topología de cuadrícula, como imágenes, pero también adaptable para secuencias.
+* **CNN (Red Neuronal Convolucional):**  Una implementación básica de una Red Neuronal Convolucional, diseñada principalmente para el procesamiento de datos con una topología de cuadrícula, como imágenes, pero también adaptable para secuencias.
 * **RNN con Regresión Lineal:** Una variante de la RNN que incorpora una capa de regresión lineal en su salida, permitiendo abordar tareas de predicción numérica en datos secuenciales.
 * **LSTM (Long Short-Term Memory):** Una implementación de una red LSTM, una arquitectura de RNN poderosa para capturar dependencias a largo plazo en secuencias.
 
