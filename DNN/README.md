@@ -13,6 +13,7 @@ Esta carpeta contiene los archivos necesarios para entender, utilizar y probar u
         * **Definición y entrenamiento del modelo:** Arquitectura de la red neuronal profunda, configuración de capas, compilación y ajuste.
         * **Evaluación:** Métricas para medir el desempeño del modelo en conjunto de validación o prueba.
         * **Visualizaciones:** Gráficos y análisis de resultados.
+    * **`EntrenarRandomForest_LogisticRegression.ipynb`**: Notebook que muestra un enfoque alternativo para el mismo problema usando modelos de machine learning clásicos, como Random Forest y Regresión Logística, sin utilizar TensorFlow. Explica el preprocesamiento, entrenamiento, evaluación y comparación de estos modelos con el DNN.
 
 * **`templates/`**:
     * **`index.html`**: Archivo HTML que define la estructura y los elementos de la interfaz web para interactuar con la API del modelo, permitiendo ingresar datos y obtener predicciones sobre el ajuste de la talla.
@@ -28,7 +29,10 @@ Esta carpeta contiene los archivos necesarios para entender, utilizar y probar u
 
 ## Cómo utilizar
 
-1.  **Explorar el Notebook:** Abre el archivo `Entrenamiento/EntrenamientoDNN.ipynb` para entender en detalle la implementación del modelo DNN, el proceso de entrenamiento y los resultados obtenidos. Puedes ejecutar las celdas del notebook en un entorno de Jupyter para revisar el código y las salidas.
+1.  **Explorar los Notebooks:**  
+    Abre los archivos dentro de `Entrenamiento/` para entender en detalle los diferentes enfoques para el problema:
+    * `EntrenamientoDNN.ipynb`: Entrenamiento y evaluación del modelo DNN con TensorFlow.  
+    * `EntrenarRandomForest_LogisticRegression.ipynb`: Entrenamiento y evaluación de modelos clásicos de machine learning (Random Forest, Regresión Logística) sin TensorFlow.
 
 2.  **Ejecutar la API de Flask:**
     * Asegúrate de tener instaladas todas las dependencias listadas en `requirements.txt` (no incluida aquí, pero necesaria). Puedes instalar las bibliotecas necesarias con:
@@ -61,6 +65,6 @@ Para ejecutar la aplicación Flask y utilizar el modelo DNN, necesitarás tener 
 ## Notas
 
 * El modelo DNN fue entrenado usando un dataset propio con medidas y etiquetas de ajuste de tallas.
-* El notebook `EntrenamientoDNN.ipynb` contiene la arquitectura y detalles del proceso de entrenamiento.
+* Los notebooks en `Entrenamiento/` contienen la arquitectura y detalles del proceso de entrenamiento tanto para DNN como para modelos clásicos de machine learning.
 * La API Flask (`app.py`) utiliza los objetos de preprocesamiento guardados para transformar datos de entrada y realiza predicciones con el modelo DNN cargado desde `keras_model.h5`.
 * La interfaz web está definida en `templates/index.html` y permite una experiencia simple para probar el modelo sin necesidad de código.
