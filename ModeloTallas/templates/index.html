@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simulador de Pedido y Feedback de Ajuste</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f0f2f5; /* Un gris claro suave */
+        }
+        .container {
+            max-width: 800px; /* Ancho máximo para el formulario */
+        }
+        /* Estilos base para inputs y selects para consistencia visual */
+        input, select {
+            border-radius: 0.5rem; /* rounded-lg */
+            padding: 0.75rem 1rem; /* py-3 px-4 */
+            border: 1px solid #d1d5db; /* border-gray-300 */
+            width: 100%;
+            box-sizing: border-box; /* Asegura que el padding no aumente el ancho */
+        }
+        button {
+            border-radius: 0.5rem; /* rounded-lg */
+            padding: 0.75rem 1.5rem; /* py-3 px-6 */
+            font-weight: 600; /* font-semibold */
+            transition: background-color 0.3s ease; /* Transición suave al pasar el ratón */
+        }
+        button:hover {
+            opacity: 0.9; /* Ligera opacidad al pasar el ratón */
+        }
+    </style>
+</head>
+<body class="bg-gray-100 flex items-center justify-center min-h-screen p-4">
+    <div class="container bg-white shadow-xl rounded-xl p-8 space-y-8">
+        <h1 class="text-4xl font-bold text-center text-gray-800 mb-8">Realizar Pedido y Obtener Feedback</h1>
+
+        <form id="predictionForm" class="space-y-6">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div>
+                    <label for="tipoPrenda" class="block text-sm font-medium text-gray-700 mb-1">Tipo de Prenda</label>
+                    <select id="tipoPrenda" name="Tipo_Prenda" class="block w-full rounded-lg border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500">
+                        <option value="">Selecciona...</option>
+                        <option value="Camiseta">Camiseta</option>
+                        <option value="Pantalón">Pantalón</option>
+                        <option value="Vestido">Vestido</option>
+                        <option value="Zapatillas">Zapatillas</option>
+                    </select>
+                </div>
+                <div>
+                    <label for="medidaPecho" class="block text-sm font-medium text-gray-700 mb-1">Medida Pecho (cm)</label>
+                    <input type="number" id="medidaPecho" name="Medida_Pecho_cm" placeholder="Ej: 90" class="block w-full rounded-lg border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500">
+                </div>
+                <div>
+                    <label for="medidaCintura" class="block text-sm font-medium text-gray-700 mb-1">Medida Cintura (cm)</label>
+                    <input type="number" id="medidaCintura" name="Medida_Cintura_cm" placeholder="Ej: 75" class="block w-full rounded-lg border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500">
+                </div>
+                <div>
+                    <label for="medidaCadera" class="block text-sm font-medium text-gray-700 mb-1">Medida Cadera (cm)</label>
+                    <input type="number" id="medidaCadera" name="Medida_Cadera_cm" placeholder="Ej: 100" class="block w-full rounded-lg border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500">
+                </div>
+                <div>
+                    <label for="altura" class="block text-sm font-medium text-gray-700 mb-1">Altura (cm)</label>
+                    <input type="number" id="altura" name="Altura_cm" placeholder="Ej: 170" class="block w-full rounded-lg border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500">
+                </div>
+                <div>
+                    <label for="peso" class="block text-sm font-medium text-gray-700 mb-1">Peso (kg)</label>
+                    <input type="number" id="peso" name="Peso_kg" placeholder="Ej: 65" class="block w-full rounded-lg border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500">
+                </div>
+                <div>
+                    <label for="edad" class="block text-sm font-medium text-gray-700 mb-1">Edad</label>
+                    <input type="number" id="edad" name="Edad" placeholder="Ej: 28" class="block w-full rounded-lg border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500">
+                </div>
+                <div>
+                    <label for="tallaRopaGeneral" class="block text-sm font-medium text-gray-700 mb-1">Talla Ropa General</label>
+                    <select id="tallaRopaGeneral" name="Talla_Ropa_General" class="block w-full rounded-lg border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500">
+                        <option value="">Selecciona...</option>
+                        <option value="S">S</option>
+                        <option value="M">M</option>
+                        <option value="L">L</option>
+                        <option value="XL">XL</option>
+                    </select>
+                </div>
+                <div>
+                    <label for="tallaZapatillas" class="block text-sm font-medium text-gray-700 mb-1">Talla Zapatillas</label>
+                    <input type="text" id="tallaZapatillas" name="Talla_Zapatillas" placeholder="Ej: 42 (opcional)" class="block w-full rounded-lg border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500">
+                </div>
+                <div>
+                    <label for="tallaPantalones" class="block text-sm font-medium text-gray-700 mb-1">Talla Pantalones</label>
+                    <input type="text" id="tallaPantalones" name="Talla_Pantalones" placeholder="Ej: 32x32 (opcional)" class="block w-full rounded-lg border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500">
+                </div>
+            </div>
+
+            <button type="submit" class="w-full bg-blue-600 text-white py-3 px-6 rounded-lg shadow-md hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2">
+                Obtener Feedback de Ajuste
+            </button>
+        </form>
+
+        <div id="result" class="mt-8 p-6 bg-blue-50 rounded-lg shadow-inner text-center text-xl font-semibold text-blue-800 hidden">
+            <p>El feedback de ajuste predicho es: <span id="predictedFeedback" class="text-blue-700 font-bold"></span></p>
+        </div>
+        <div id="errorMessage" class="mt-4 p-4 bg-red-100 border border-red-400 text-red-700 rounded-lg hidden"></div>
+    </div>
+
+    <script>
+        document.getElementById('predictionForm').addEventListener('submit', async function(event) {
+            event.preventDefault(); // Prevenir el envío del formulario por defecto
+
+            const form = event.target;
+            const formData = new FormData(form);
+            const data = {};
+
+            // Convertir FormData a un objeto JSON
+            for (let [key, value] of formData.entries()) {
+                // Convertir valores numéricos a números, manejar campos vacíos como null o NaN
+                if (['Medida_Pecho_cm', 'Medida_Cintura_cm', 'Medida_Cadera_cm', 'Altura_cm', 'Peso_kg', 'Edad'].includes(key)) {
+                    data[key] = value === '' ? null : parseFloat(value);
+                } else {
+                    data[key] = value === '' ? null : value; // Usar null para cadenas vacías
+                }
+            }
+
+            const resultDiv = document.getElementById('result');
+            const predictedFeedbackSpan = document.getElementById('predictedFeedback');
+            const errorMessageDiv = document.getElementById('errorMessage');
+
+            resultDiv.classList.add('hidden');
+            errorMessageDiv.classList.add('hidden');
+            errorMessageDiv.textContent = '';
+
+            try {
+                // URL de tu API Flask (asegúrate de que sea la correcta)
+                const response = await fetch('http://127.0.0.1:5000/predict', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify(data),
+                });
+
+                if (!response.ok) {
+                    const errorData = await response.json();
+                    throw new Error(errorData.error || `Error HTTP: ${response.status}`);
+                }
+
+                const result = await response.json();
+                predictedFeedbackSpan.textContent = result.feedback_ajuste;
+                resultDiv.classList.remove('hidden');
+
+            } catch (error) {
+                console.error('Error al obtener la predicción:', error);
+                errorMessageDiv.textContent = `Error: ${error.message}. Por favor, verifica los datos de entrada y que la API esté funcionando.`;
+                errorMessageDiv.classList.remove('hidden');
+            }
+        });
+    </script>
+</body>
+</html>
