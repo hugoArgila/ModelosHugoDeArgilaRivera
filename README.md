@@ -44,15 +44,8 @@ Para cada modelo, encontrarás los siguientes archivos:
 
 5.  **Ejecutar los scripts (si aplica):** Sigue las instrucciones en los archivos README individuales de cada modelo o en los scripts de entrenamiento para ejecutar los modelos con los datos de ejemplo proporcionados (si los hay).
 
-## Próximos Pasos
-
-En el futuro, planeo agregar los siguientes modelos a este portafolio:
-
-* [Menciona aquí los próximos modelos que planeas incluir, por ejemplo, una CNN, un Transformer, etc.]
-* [También puedes mencionar mejoras que planeas hacer, como agregar más documentación, ejemplos de uso con diferentes datasets, etc.]
-
 ## Contacto
 
-Si tienes alguna pregunta o comentario sobre este portafolio, no dudes en contactarme a través de [tu dirección de correo electrónico] o [tu perfil de LinkedIn/otra plataforma].
+Si tienes alguna pregunta o comentario sobre este portafolio, no dudes en contactarme a través de [hugoargila@gmail.com].
 
 ¡Gracias por visitar mi repositorio!
