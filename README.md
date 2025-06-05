@@ -9,6 +9,7 @@ Actualmente, este portafolio incluye los siguientes modelos:
 * **CNN (Red Neuronal Convolucional):**  Una implementación básica de una Red Neuronal Convolucional, diseñada principalmente para el procesamiento de datos con una topología de cuadrícula, como imágenes, pero también adaptable para secuencias.
 * **RNN con Regresión Lineal:** Una variante de la RNN que incorpora una capa de regresión lineal en su salida, permitiendo abordar tareas de predicción numérica en datos secuenciales.
 * **LSTM (Long Short-Term Memory):** Una implementación de una red LSTM, una arquitectura de RNN poderosa para capturar dependencias a largo plazo en secuencias.
+* **DNN (Red Neuronal Profunda):** Una implementación de una Red Neuronal Profunda genérica, diseñada para tareas de clasificación o regresión en datos estructurados o tabulares, aprendiendo representaciones complejas a través de múltiples capas ocultas.
 
 ## Contenido del Repositorio
 
